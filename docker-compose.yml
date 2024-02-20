@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    build: .
+    volumes:
+      - ./logs:/logs
+    env_file:
+        - .env
+    ports:
+      - "${HTTP_PORT}:${HTTP_PORT}"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGODB_DATABASE: $(MONGO_DATABASE)
+    ports:
+      - "27018:27017"
