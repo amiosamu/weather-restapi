@@ -1,5 +1,5 @@
 app:
-  name: 'todo api'
+  name: 'weather api'
   version: '1.0.0'
 
 http:

@@ -8,6 +8,7 @@
 - mongo-driver/mongo (для хранилища данных)
 - docker и docker-compose (для запуска сервиса)
 - gin-gonic/gin (веб фреймворк)
+- golang/mock, testify (для тестирования)
 
 ## Запуск
 
