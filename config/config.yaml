@@ -1,0 +1,11 @@
+app:
+  name: 'todo api'
+  version: '1.0.0'
+
+http:
+  port: 8080
+
+mongo:
+  addr: "mongodb:27017"
+  username: "weatherapi"
+  password: "weatherapi"
